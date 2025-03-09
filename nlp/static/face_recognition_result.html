@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Face Recognition Result</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Face Recognition Result</h1>
+            <table class="result-table">
+                <tr><th>Similarity</th><td>{similarity}</td></tr>
+            </table>
+            <div class="image-grid">
+                <div>
+                    <p>입력 이미지 1</p>
+                    <img src="/static/input_image1.jpg" alt="Input Image 1">
+                </div>
+                <div>
+                    <p>입력 이미지 2</p>
+                    <img src="/static/input_image2.jpg" alt="Input Image 2">
+                </div>
+                <div>
+                    <p>출력 이미지 1</p>
+                    <img src="/static/result_image1.jpg" alt="Result Image 1">
+                </div>
+                <div>
+                    <p>출력 이미지 2</p>
+                    <img src="/static/result_image2.jpg" alt="Result Image 2">
+                </div>
+            </div>
+            <button onclick="window.location.href='/home'">Return to Home</button>
+        </div>
+    </body>
+</html> 

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Image Classification Result</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Image Classification Result</h1>
+            <p>Message: {message}</p>
+            <p>Top Category: {top_category}</p>
+            <p>Score: {score:.2f}</p>
+            <div class="image-grid">
+                <div>
+                    <p>입력 이미지</p>
+                    <img src="/static/input_image.jpg" alt="Input Image">
+                </div>
+                <div>
+                    <p>출력 이미지</p>
+                    <img src="/static/result_image.jpg" alt="Result Image">
+                </div>
+            </div>
+            <button onclick="window.location.href='/home'">Return to Home</button>
+        </div>
+    </body>
+</html> 
