@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>관상-궁합 서비스 목업</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+        function previewImage(input, imageId) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgElement = document.getElementById(imageId);
+                    imgElement.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>관상-궁합 서비스 목업</h1>
+        <div class="message-frame">
+            세계의 유명한 셀럽들과 당신의 친구! 가족! 사랑하는 사람들과의 궁합을 알아봅시다! 지금 사진 한 장으로 시작해보세요 🤣
+        </div>
+        <form action="/uploadfile/" enctype="multipart/form-data" method="post">
+            <div class="upload-area">
+                <label class="upload-box upload-label" for="file1">
+                    <img id="preview1" src="" alt="">
+                    👋 여기에 당신의 사진을 넣어주세요 👋
+                </label>
+                <input id="file1" name="file1" type="file" onchange="previewImage(this, 'preview1')">
+                <input type="text" class="name-input" name="name1" value="나">
+                <label class="upload-box upload-label" for="file2">
+                    <img id="preview2" src="" alt="">
+                    사진 2 등록
+                </label>
+                <input id="file2" name="file2" type="file" onchange="previewImage(this, 'preview2')">
+                <input type="text" class="name-input" name="name2" value="누군가">
+            </div>
+            <input type="submit" class="submit-button" value="궁합보기!">
+            <p class="small-text">*걱정마세요! 사진은 절대로 저장되지 않습니다.</p>
+        </form>
+    </div>
+</body>
+</html> 

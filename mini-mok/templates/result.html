@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>결과 페이지</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Chart.js 라이브러리 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>결과 페이지</h1>
+        <div class="image-frame">
+            <div class="image-container">
+                <a href="/face/1"><img src="/static/{{ filename1 }}" alt="Uploaded Image 1"></a>
+                <a href="/face/2"><img src="/static/{{ filename2 }}" alt="Uploaded Image 2"></a>
+            </div>
+        </div>
+        <div class="result-frame">
+            <h2>궁합 결과 : 좋음</h2>
+            <p>사진을 보니 서로 궁합이 좋아보입니다. 두 사람의 미소가 서로를 향하고 있으며, 눈빛에서 따뜻함이 느껴집니다. 이러한 모습은 서로에 대한 깊은 이해와 존중을 나타내며, 함께하는 시간이 즐겁고 행복할 것임을 암시합니다. 서로의 장점을 잘 살려가며, 앞으로도 좋은 관계를 유지할 수 있을 것입니다. 이러한 긍정적인 에너지가 주변 사람들에게도 좋은 영향을 미칠 것입니다.</p>
+        </div>
+        <div class="graph-description">
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+        <div class="buttons">
+            <button class="retry-button" onclick="location.href='/'">다시하기</button>
+            <div class="share-frame">
+                <a href="#" target="_blank">Twitter 공유</a>
+                <a href="#" target="_blank">Instagram 공유</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Chart.js를 사용하여 그래프 초기화
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1', '2', '3', '4', '5'],
+                datasets: [{
+                    label: '파란 선',
+                    data: [0, 1, 2, 1, 3],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    fill: false
+                }, {
+                    label: '붉은 선',
+                    data: [1, -1, 2, 0, 2],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1,
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

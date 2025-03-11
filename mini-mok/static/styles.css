@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+.image-frame {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.image-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.result-frame {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.graph-description {
+    margin-top: 20px;
+    text-align: center;
+}
+#myChart {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.retry-button {
+    margin: 20px 0;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.share-frame {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.share-frame a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+.evaluation {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.message-frame {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+.upload-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.upload-box {
+    width: 45%;
+    height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    position: relative;
+    margin-bottom: 5px;
+}
+.upload-box img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+input[type="file"] {
+    display: none;
+}
+.upload-label {
+    cursor: pointer;
+}
+.name-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 45%;
+    text-align: center;
+}
+.submit-button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+} 
